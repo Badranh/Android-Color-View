@@ -11,14 +11,17 @@ import android.view.ViewGroup;
  * Created by Hasan Badran on 8/12/2018.
  */
 
- class ColorAdapter  extends RecyclerView.Adapter<ColorAdapter.ViewHolder>{
+ public class ColorAdapter  extends RecyclerView.Adapter<ColorAdapter.ViewHolder>{
+     public interface onCardClick{
+         void onClickCallBack();
+     }
     private String[] colors;
-    private ColorView.onCardColorClick listener;
+    private onCardClick listener;
     public ColorAdapter(String[] colors) {
         this.colors = colors;
     }
 
-    public ColorAdapter(String[] colors, ColorView.onCardColorClick listener) {
+    public ColorAdapter(String[] colors, onCardClick listener) {
         this.colors = colors;
         this.listener = listener;
     }
@@ -48,7 +51,7 @@ import android.view.ViewGroup;
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        listener.ClickCallBack();
+                        listener.onClickCallBack();
                     }
                 });
             }

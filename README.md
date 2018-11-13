@@ -1,5 +1,6 @@
 # Android-Color-View
-Made it on the go while I was doing an e commerce project , feel free to make it better :)
+Educational Purpose Project
+Made it on the go while I was doing an e commerce project , feel free to make it better :) or learn from it 
 
 # Example
 Colors can be modified as you want with onClickListener
